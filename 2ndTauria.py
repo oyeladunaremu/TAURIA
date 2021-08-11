@@ -4,6 +4,7 @@ import time
 import re
 import random
 import string
+import os
 
 
 def random_string(length):  
@@ -16,7 +17,7 @@ ab=random_string(5)
 print (ab)
 
 #opening the browser
-driver=webdriver.Chrome(executable_path=r"C:\\Users\\oyeladun.aremu\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe")
+driver=webdriver.Chrome(executable_path=os.getcwd()+ r"\\chromedriver.exe")
 driver.maximize_window()
 
 driver.implicitly_wait(60)

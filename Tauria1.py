@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import re
+import os
 
 
 
@@ -17,7 +18,7 @@ def factorial_func(num):
             factorial = factorial*i
         return factorial
 
-driver=webdriver.Chrome(executable_path=r"C:\\Users\\oyeladun.aremu\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe")
+driver=webdriver.Chrome(executable_path=os.getcwd()+ r"\\chromedriver.exe")
 driver.maximize_window()
 driver.get("http://localhost:6464/")
 num_to_calc = 7
